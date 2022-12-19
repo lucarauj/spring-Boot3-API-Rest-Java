@@ -61,34 +61,35 @@ spring.datasource.password=
 
 ### 📝 Anotações utilizadas no projeto:
 
-- @RestController
-- @RequestMapping
-- @GetMapping
-- @PostMapping
-- @RequestBody
-- @Table
-- @Entity
-- @Id
-- @GeneratedValue
-- @Enumerated
-- @Embedded
-- @Embeddable
-- @Getter
-- @NoArgsConstructor
-- @AllArgsConstructor
-- @EqualsAndHashCode
-- @Autowired
-- @Transactional
+- @RestController: marca a classe como um controlador onde cada método retorna um objeto de domínio em vez de uma visão;
+- @RequestMapping: usada para mapear solicitações da web para classes manipuladoras específicas e métodos manipuladores;
+- @GetMapping: usada para mapear solicitações HTTP GET em métodos manipuladores específicos;
+- @PostMapping: usada para mapear solicitações HTTP POST em métodos específicos de manipulador;
+- @RequestBody: indica que o valor do objeto virá do corpo da requisição;
+- @Table: usada para especificar a tabela principal da entidade atualmente anotada;
+- @Entity: utilizada para informar que uma classe também é uma entidade;
+- @Id: especifica o identificador da entidade. Uma entidade deve sempre ter um atributo identificador, que é usado ao carregar a entidade em um determinado contexto de persistência;
+- @GeneratedValue: especifica que o valor do identificador de entidade é gerado automaticamente usando uma coluna de identidade, uma sequência de banco de dados ou um gerador de tabelas;
+- @Enumerated: usada para especificar que um atributo de entidade representa um tipo enumerado;
+- @Embedded: usada para especificar que um determinado atributo de entidade representa um tipo incorporável;
+- @Embeddable: usada para especificar tipos incorporáveis. Como os tipos básicos, os tipos incorporáveis não tem identidade, sendo gerenciados por sua entidade proprietária;
+- @Getter: com essa anotação não se faz mais necessária a criação dos métodos de recuperação e configuração das propriedades das classes;
+- @NoArgsConstructor:  fornece a criação de um construtor vazio;
+- @AllArgsConstructor: fornece a criação de um construtor com todos os atributos;
+- @EqualsAndHashCode: método equals e hashCode são gerados automaticamente para os campos do objeto;
+- @Autowired: delega ao Spring Boot a inicialização do objeto;
+- @Transactional: utilizada nos métodos que precisam de transação;
 - @NotBlank: um atributo do tipo String não pode ser nulo e nem vazio;
-- @Email
-- @Pattern
-- @NotNull
-- @Valid
-- @GenerationType
-- @PageableDefault
-- @PutMapping
-- @DeleteMapping
-- @PathVariable
+- @Email: valida se a propriedade anotada é um e-mail válido;
+- @Pattern: checa se a propriedade obedece à expressão regular;
+- @NotNull: checa se o valor anotado não é nulo (null);
+- @Valid: indica que o valor do objeto virá do corpo da requisição;
+- @GenerationValue(GenerationType.IDENTITY):  informa ao provedor de persistência que os valores a serem atribuídos ao identificador único serão gerados pela coluna de auto incremento do banco de dados
+- @PageableDefault: permite que sejam informados parâmetros default de paginação e ordenação;
+- @PutMapping: usada para mapear solicitações HTTP PUT em métodos manipuladores específicos;
+- @DeleteMapping: usada para mapear solicitações HTTP DELETE em métodos manipuladores específicos;
+- @PathVariable: indica que o valor da variável virá de uma informação da rota;
+
 
 ### 🛠 Configuração para comandos SQL disparados no banco de dados ```application.properties```:
 
