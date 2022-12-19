@@ -68,7 +68,7 @@ spring.datasource.password=
 - @RequestBody: indica que o valor do objeto virá do corpo da requisição;
 - @Table: usada para especificar a tabela principal da entidade atualmente anotada;
 - @Entity: utilizada para informar que uma classe também é uma entidade;
-- @Id: especifica o identificador da entidade. Uma entidade deve sempre ter um atributo identificador, que é usado ao carregar a entidade em um determinado contexto de persistência;
+- @Id: especifica o identificador da entidade,  que é usado ao carregar a entidade em um determinado contexto de persistência;
 - @GeneratedValue: especifica que o valor do identificador de entidade é gerado automaticamente usando uma coluna de identidade, uma sequência de banco de dados ou um gerador de tabelas;
 - @Enumerated: usada para especificar que um atributo de entidade representa um tipo enumerado;
 - @Embedded: usada para especificar que um determinado atributo de entidade representa um tipo incorporável;
